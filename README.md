@@ -1,3 +1,6 @@
+<img width="120" height="44" alt="image" src="https://github.com/user-attachments/assets/f66ca227-a58d-4c4a-b33f-1042c9a1ea00" />
+<br>
+
 # App de Lista de Tarefas
 
 Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese JS). 
