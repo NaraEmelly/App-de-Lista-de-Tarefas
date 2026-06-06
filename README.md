@@ -17,11 +17,11 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 
 ## Estrutura de arquivos:
 
-```
+
 <img width="271" height="287" alt="image" src="https://github.com/user-attachments/assets/6ab2bf99-f7e6-4475-8bd4-bcf2c7c356e8" />
 
 
-```
+
 ---
 
 
