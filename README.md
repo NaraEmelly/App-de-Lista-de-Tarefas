@@ -4,7 +4,7 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 
 <br>
 
-# Funcionalidades:
+## Funcionalidades:
 
 - Adicionar tarefas.
 - Marcar como concluída.
