@@ -18,20 +18,8 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 ## Estrutura de arquivos:
 
 ```
-src/
-├── components/
-│   ├── Header.jsx
-│   ├── TarefaItem.jsx
-│   ├── FormularioTarefa.jsx
-│   └── Filtros.jsx
-├── styles/
-│   ├── GlobalStyle.js
-│   ├── themes.js
-│   └── components/
-│       ├── Header.styles.js
-│       └── Tarefa.styles.js
-├── App.jsx
-└── main.jsx
+<img width="271" height="287" alt="image" src="https://github.com/user-attachments/assets/6ab2bf99-f7e6-4475-8bd4-bcf2c7c356e8" />
+
 
 ```
 ---
