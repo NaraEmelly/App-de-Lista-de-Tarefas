@@ -12,7 +12,7 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 - Filtrar por status (todas, ativas, concluídas).
 - Alternar entre tema claro e escuro.
 
-## Estrutura de arquivos sugerida:
+## Estrutura de arquivos:
 
 ```
 src/
