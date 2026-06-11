@@ -1,4 +1,3 @@
-cat > src/styles/themes.js << 'EOF'
 export const lightTheme = {
   colors: {
     primary: '#4CAF50',
@@ -30,4 +29,3 @@ export const darkTheme = {
     large: '24px',
   },
 };
-EOF

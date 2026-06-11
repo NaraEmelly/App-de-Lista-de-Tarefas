@@ -1,4 +1,3 @@
-cat > src/components/Header.jsx << 'EOF'
 import { HeaderContainer, Title, ThemeButton } from '../styles/components/Header.styles';
 
 export default function Header({ toggleTheme, isDark }) {
@@ -11,4 +10,3 @@ export default function Header({ toggleTheme, isDark }) {
     </HeaderContainer>
   );
 }
-EOF

@@ -1,10 +1,9 @@
-cat > src/components/TarefaItem.jsx << 'EOF'
 import { ItemContainer, TaskText, ButtonGroup, ActionButton } from '../styles/components/Tarefa.styles';
 
 export default function TarefaItem({ tarefa, toggleConcluida, removerTarefa }) {
   return (
     <ItemContainer>
-      <TaskText 
+      <TaskText
         $concluida={tarefa.concluida}
         onClick={() => toggleConcluida(tarefa.id)}
       >
@@ -21,4 +20,3 @@ export default function TarefaItem({ tarefa, toggleConcluida, removerTarefa }) {
     </ItemContainer>
   );
 }
-EOF

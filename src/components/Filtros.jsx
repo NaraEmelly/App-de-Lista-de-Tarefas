@@ -1,4 +1,3 @@
-cat > src/components/Filtros.jsx << 'EOF'
 import { FilterContainer, FilterButton } from '../styles/components/Tarefa.styles';
 
 export default function Filtros({ filtroAtual, setFiltro }) {
@@ -22,4 +21,3 @@ export default function Filtros({ filtroAtual, setFiltro }) {
     </FilterContainer>
   );
 }
-EOF

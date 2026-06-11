@@ -1,4 +1,3 @@
-cat > src/components/FormularioTarefa.jsx << 'EOF'
 import { useState } from 'react';
 import { Form, Input, SubmitButton } from '../styles/components/Tarefa.styles';
 
@@ -25,4 +24,3 @@ export default function FormularioTarefa({ adicionarTarefa }) {
     </Form>
   );
 }
-EOF

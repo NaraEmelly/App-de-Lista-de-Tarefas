@@ -1,4 +1,3 @@
-cat > src/styles/GlobalStyle.js << 'EOF'
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
@@ -17,4 +16,3 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 export default GlobalStyle;
-EOF

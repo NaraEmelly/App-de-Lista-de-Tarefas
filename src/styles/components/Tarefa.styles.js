@@ -1,4 +1,3 @@
-cat > src/styles/components/Tarefa.styles.js << 'EOF'
 import styled from 'styled-components';
 
 export const ItemContainer = styled.div`
@@ -87,4 +86,3 @@ export const FilterButton = styled.button`
     opacity: 0.8;
   }
 `;
-EOF

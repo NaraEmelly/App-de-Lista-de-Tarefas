@@ -1,4 +1,3 @@
-cat > src/App.jsx << 'EOF'
 import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
@@ -56,9 +55,7 @@ function App() {
           />
         ))}
         {tarefasFiltradas.length === 0 && (
-          <p style={{ textAlign: 'center', marginTop: '2rem' }}>
-            Nenhuma tarefa encontrada
-          </p>
+          <p style={{ textAlign: 'center', marginTop: '2rem' }}>Nenhuma tarefa encontrada</p>
         )}
       </div>
     </ThemeProvider>
@@ -66,4 +63,3 @@ function App() {
 }
 
 export default App;
-EOF
