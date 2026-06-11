@@ -1,13 +1,25 @@
-import React from 'react';
+cat > src/components/Filtros.jsx << 'EOF'
+import { FilterContainer, FilterButton } from '../styles/components/Tarefa.styles';
 
-function Filtros({ filtroAtual, setFiltro }) {
+export default function Filtros({ filtroAtual, setFiltro }) {
+  const filtros = [
+    { valor: 'todas', label: '📋 Todas' },
+    { valor: 'ativas', label: '🔄 Ativas' },
+    { valor: 'concluidas', label: '✅ Concluídas' }
+  ];
+
   return (
-    <div style={{ display: 'flex', gap: '10px', marginBottom: '20px' }}>
-      <button disabled={filtroAtual === 'todas'} onClick={() => setFiltro('todas')}>Todas</button>
-      <button disabled={filtroAtual === 'ativas'} onClick={() => setFiltro('ativas')}>Ativas</button>
-      <button disabled={filtroAtual === 'concluidas'} onClick={() => setFiltro('concluidas')}>Concluídas</button>
-    </div>
+    <FilterContainer>
+      {filtros.map(filtro => (
+        <FilterButton
+          key={filtro.valor}
+          $active={filtroAtual === filtro.valor}
+          onClick={() => setFiltro(filtro.valor)}
+        >
+          {filtro.label}
+        </FilterButton>
+      ))}
+    </FilterContainer>
   );
 }
-
-export default Filtros;
+EOF

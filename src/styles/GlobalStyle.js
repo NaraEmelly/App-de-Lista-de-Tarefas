@@ -1,21 +1,20 @@
+cat > src/styles/GlobalStyle.js << 'EOF'
 import { createGlobalStyle } from 'styled-components';
 
-export const GlobalStyle = createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
   * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   }
 
   body {
-    background-color: ${(props) => props.theme.background};
-    color: ${(props) => props.theme.text};
-    transition: background-color 0.3s ease, color 0.3s ease;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: ${props => props.theme.colors.background};
+    color: ${props => props.theme.colors.text};
+    transition: all 0.3s ease;
   }
 `;
+
+export default GlobalStyle;
+EOF

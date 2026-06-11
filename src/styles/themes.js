@@ -1,19 +1,33 @@
+cat > src/styles/themes.js << 'EOF'
 export const lightTheme = {
-  background: '#FFFFFF',
-  text: '#1C1C1C',
-  taskBg: '#F0F0F0',
-  taskBorder: '#E0E0E0',
-  buttonBg: '#da47ff',
-  buttonText: '#FFFFFF',
-  completedText: '#A0A0A0'
+  colors: {
+    primary: '#4CAF50',
+    danger: '#f44336',
+    background: '#ffffff',
+    text: '#333333',
+    card: '#f5f5f5',
+    border: '#dddddd',
+  },
+  spacing: {
+    small: '8px',
+    medium: '16px',
+    large: '24px',
+  },
 };
 
 export const darkTheme = {
-  background: '#121212',
-  text: '#F5F5F5',
-  taskBg: '#1E1E1E',
-  taskBorder: '#333333',
-  buttonBg: '#832af0',
-  buttonText: '#000000',
-  completedText: '#666666'
+  colors: {
+    primary: '#66bb6a',
+    danger: '#ef5350',
+    background: '#1a1a1a',
+    text: '#e0e0e0',
+    card: '#2d2d2d',
+    border: '#444444',
+  },
+  spacing: {
+    small: '8px',
+    medium: '16px',
+    large: '24px',
+  },
 };
+EOF

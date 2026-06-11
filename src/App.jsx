@@ -1,59 +1,69 @@
-import React, { useState } from 'react';
+cat > src/App.jsx << 'EOF'
+import { useState } from 'react';
 import { ThemeProvider } from 'styled-components';
 import { lightTheme, darkTheme } from './styles/themes';
-import { GlobalStyle } from './styles/GlobalStyle';
+import GlobalStyle from './styles/GlobalStyle';
 import Header from './components/Header';
 import FormularioTarefa from './components/FormularioTarefa';
-import TarefaItem from './components/TarefaItem';
 import Filtros from './components/Filtros';
+import TarefaItem from './components/TarefaItem';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const [tarefas, setTarefas] = useState([]);
-  const [filtro, setFiltro] = useState('todas'); // 'todas', 'ativas', 'concluidas'
-
-  const currentTheme = isDarkMode ? darkTheme : lightTheme;
+  const [filtro, setFiltro] = useState('todas');
+  const [isDark, setIsDark] = useState(false);
 
   const adicionarTarefa = (texto) => {
-    setTarefas([...tarefas, { id: Date.now(), texto, concluida: false }]);
+    const novaTarefa = {
+      id: Date.now(),
+      texto: texto,
+      concluida: false
+    };
+    setTarefas([...tarefas, novaTarefa]);
   };
 
-  const alternarStatus = (id) => {
-    setTarefas(tarefas.map(t => t.id === id ? { ...t, concluida: !t.concluida } : t));
+  const toggleConcluida = (id) => {
+    setTarefas(tarefas.map(tarefa =>
+      tarefa.id === id ? { ...tarefa, concluida: !tarefa.concluida } : tarefa
+    ));
   };
 
-  const deletarTarefa = (id) => {
-    setTarefas(tarefas.filter(t => t.id !== id));
+  const removerTarefa = (id) => {
+    setTarefas(tarefas.filter(tarefa => tarefa.id !== id));
   };
 
-  // Filtragem das tarefas antes de renderizar
-  const tarefasFiltradas = tarefas.filter(t => {
-    if (filtro === 'ativas') return !t.concluida;
-    if (filtro === 'concluidas') return t.concluida;
+  const tarefasFiltradas = tarefas.filter(tarefa => {
+    if (filtro === 'ativas') return !tarefa.concluida;
+    if (filtro === 'concluidas') return tarefa.concluida;
     return true;
   });
 
+  const toggleTheme = () => setIsDark(!isDark);
+
   return (
-    <ThemeProvider theme={currentTheme}>
+    <ThemeProvider theme={isDark ? darkTheme : lightTheme}>
       <GlobalStyle />
-      <main style={{ width: '100%', maxWidth: '500px' }}>
-        <Header isDarkMode={isDarkMode} toggleTema={() => setIsDarkMode(!isDarkMode)} />
+      <div style={{ maxWidth: '600px', margin: '0 auto', padding: '1rem' }}>
+        <Header toggleTheme={toggleTheme} isDark={isDark} />
         <FormularioTarefa adicionarTarefa={adicionarTarefa} />
         <Filtros filtroAtual={filtro} setFiltro={setFiltro} />
-        
-        <ul style={{ listStyle: 'none', padding: 0 }}>
-          {tarefasFiltradas.map(tarefa => (
-            <TarefaItem 
-              key={tarefa.id} 
-              tarefa={tarefa} 
-              alternarStatus={alternarStatus} 
-              deletarTarefa={deletarTarefa} 
-            />
-          ))}
-        </ul>
-      </main>
+        {tarefasFiltradas.map(tarefa => (
+          <TarefaItem
+            key={tarefa.id}
+            tarefa={tarefa}
+            toggleConcluida={toggleConcluida}
+            removerTarefa={removerTarefa}
+          />
+        ))}
+        {tarefasFiltradas.length === 0 && (
+          <p style={{ textAlign: 'center', marginTop: '2rem' }}>
+            Nenhuma tarefa encontrada
+          </p>
+        )}
+      </div>
     </ThemeProvider>
   );
 }
 
 export default App;
+EOF

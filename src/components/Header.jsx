@@ -1,15 +1,14 @@
-import React from 'react';
-import { HeaderContainer, ToggleButton } from '../styles/components/Header.styles';
+cat > src/components/Header.jsx << 'EOF'
+import { HeaderContainer, Title, ThemeButton } from '../styles/components/Header.styles';
 
-function Header({ isDarkMode, toggleTema }) {
+export default function Header({ toggleTheme, isDark }) {
   return (
     <HeaderContainer>
-      <h1>Lista de Tarefas</h1>
-      <ToggleButton onClick={toggleTema}>
-        {isDarkMode ? 'Modo Claro' : 'Modo Escuro'}
-      </ToggleButton>
+      <Title>📝 Minhas Tarefas</Title>
+      <ThemeButton onClick={toggleTheme}>
+        {isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro'}
+      </ThemeButton>
     </HeaderContainer>
   );
 }
-
-export default Header;
+EOF

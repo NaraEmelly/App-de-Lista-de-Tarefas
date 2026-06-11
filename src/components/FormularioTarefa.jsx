@@ -1,27 +1,28 @@
-import React, { useState } from 'react';
-import { FormContainer, InputTarefa, BotaoTarefa } from '../styles/components/Tarefa.styles';
+cat > src/components/FormularioTarefa.jsx << 'EOF'
+import { useState } from 'react';
+import { Form, Input, SubmitButton } from '../styles/components/Tarefa.styles';
 
-function FormularioTarefa({ adicionarTarefa }) {
+export default function FormularioTarefa({ adicionarTarefa }) {
   const [texto, setTexto] = useState('');
 
-  const lidarComEnvio = (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    if (!texto.trim()) return;
-    adicionarTarefa(texto);
-    setTexto('');
+    if (texto.trim()) {
+      adicionarTarefa(texto);
+      setTexto('');
+    }
   };
 
   return (
-    <FormContainer onSubmit={lidarComEnvio}>
-      <InputTarefa
+    <Form onSubmit={handleSubmit}>
+      <Input
         type="text"
-        placeholder="Nova tarefa..."
+        placeholder="Digite uma nova tarefa..."
         value={texto}
         onChange={(e) => setTexto(e.target.value)}
       />
-      <BotaoTarefa type="submit">Adicionar</BotaoTarefa>
-    </FormContainer>
+      <SubmitButton type="submit">+ Adicionar</SubmitButton>
+    </Form>
   );
 }
-
-export default FormularioTarefa;
+EOF

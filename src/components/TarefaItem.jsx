@@ -1,22 +1,24 @@
-import React from 'react';
-import { ItemLista, TextoItem } from '../styles/components/Tarefa.styles';
+cat > src/components/TarefaItem.jsx << 'EOF'
+import { ItemContainer, TaskText, ButtonGroup, ActionButton } from '../styles/components/Tarefa.styles';
 
-function TarefaItem({ tarefa, alternarStatus, deletarTarefa }) {
+export default function TarefaItem({ tarefa, toggleConcluida, removerTarefa }) {
   return (
-    <ItemLista>
-      <TextoItem 
-        $concluida={tarefa.concluida} 
-        onClick={() => alternarStatus(tarefa.id)}
-        style={{ cursor: 'pointer', flex: 1 }}
+    <ItemContainer>
+      <TaskText 
+        $concluida={tarefa.concluida}
+        onClick={() => toggleConcluida(tarefa.id)}
       >
         {tarefa.texto}
-      </TextoItem>
-      <div style={{ display: 'flex', gap: '5px' }}>
-        <button onClick={() => alternarStatus(tarefa.id)}>Concluir</button>
-        <button onClick={() => deletarTarefa(tarefa.id)}>Excluir</button>
-      </div>
-    </ItemLista>
+      </TaskText>
+      <ButtonGroup>
+        <ActionButton onClick={() => toggleConcluida(tarefa.id)}>
+          {tarefa.concluida ? '↺' : '✓'}
+        </ActionButton>
+        <ActionButton $perigo onClick={() => removerTarefa(tarefa.id)}>
+          ✗
+        </ActionButton>
+      </ButtonGroup>
+    </ItemContainer>
   );
 }
-
-export default TarefaItem;
+EOF
