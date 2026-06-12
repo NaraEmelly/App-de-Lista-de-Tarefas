@@ -66,6 +66,9 @@ Siga os passos abaixo para executar o projeto no seu computador.
 
 ---
 
+## Licença
+   Este projeto é de uso educacional
 
+## Autora : Nayara Emelly Pereira
 
 
