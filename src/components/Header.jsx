@@ -3,9 +3,9 @@ import { HeaderContainer, Title, ThemeButton } from '../styles/components/Header
 export default function Header({ toggleTheme, isDark }) {
   return (
     <HeaderContainer>
-      <Title>📝 Minhas Tarefas</Title>
+      <Title>Lista de Tarefas</Title>
       <ThemeButton onClick={toggleTheme}>
-        {isDark ? '☀️ Modo Claro' : '🌙 Modo Escuro'}
+        {isDark ? '☀️' : '🌙'}
       </ThemeButton>
     </HeaderContainer>
   );

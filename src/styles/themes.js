@@ -1,6 +1,6 @@
 export const lightTheme = {
   colors: {
-    primary: '#4CAF50',
+    primary: '#5d88ff',
     danger: '#f44336',
     background: '#ffffff',
     text: '#333333',
@@ -16,11 +16,11 @@ export const lightTheme = {
 
 export const darkTheme = {
   colors: {
-    primary: '#66bb6a',
-    danger: '#ef5350',
-    background: '#1a1a1a',
+    primary: '#5d88ff',
+    danger: '#ac120f',
+    background: '#020202',
     text: '#e0e0e0',
-    card: '#2d2d2d',
+    card: '#181717',
     border: '#444444',
   },
   spacing: {

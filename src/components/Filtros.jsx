@@ -2,9 +2,9 @@ import { FilterContainer, FilterButton } from '../styles/components/Tarefa.style
 
 export default function Filtros({ filtroAtual, setFiltro }) {
   const filtros = [
-    { valor: 'todas', label: '📋 Todas' },
-    { valor: 'ativas', label: '🔄 Ativas' },
-    { valor: 'concluidas', label: '✅ Concluídas' }
+    { valor: 'todas', label: 'Todas' },
+    { valor: 'ativas', label: 'Ativas' },
+    { valor: 'concluidas', label: 'Concluídas' }
   ];
 
   return (
