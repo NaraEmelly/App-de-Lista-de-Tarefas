@@ -57,11 +57,13 @@ Siga os passos abaixo para executar o projeto no seu computador.
 
 ## Interface
 
-<img width="1384" height="515" alt="Gravando 2026-06-12 132452" src="https://github.com/user-attachments/assets/941151a9-7ac2-4485-bca2-8fbe47920609" />
+<img width="962" height="515" alt="image" src="https://github.com/user-attachments/assets/a19487f7-517c-40b9-88f1-5accd8436478" />
+
 
 ## Modo escuro
 
-<img width="1385" height="510" alt="image" src="https://github.com/user-attachments/assets/1987df50-796b-4fa8-a1d8-0c765ec5f5b7" />
+<img width="965" height="569" alt="image" src="https://github.com/user-attachments/assets/d8a72e6e-0c85-4e92-9eab-31697323b422" />
+
 
 
 ---
