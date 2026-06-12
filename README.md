@@ -21,6 +21,8 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 <img width="407" height="486" alt="image" src="https://github.com/user-attachments/assets/963e6c88-57fd-425b-98e2-ce9be01eab11" />
 
 
+## Interface
+
 
 
 ---
