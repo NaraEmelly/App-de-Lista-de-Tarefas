@@ -7,6 +7,34 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 
 <br>
 
+
+## Como rodar localmente
+
+Siga os passos abaixo para executar o projeto no seu computador.
+
+### Pré-requisitos
+
+- [Node.js](https://nodejs.org/) (versão 18 ou superior)
+- Gerenciador de pacotes `npm` (já vem com o Node)
+
+### Passo a passo
+
+1. **Clone o repositório** (ou baixe os arquivos):
+   ```bash
+   git clone https://github.com/NaraEmelly/App-de-Lista-de-Tarefas.git
+2. **Acesse a pasta do projeto:**
+   ```bash
+   cd App-de-Lista-de-Tarefas
+3. **Instale as dependências:**
+   ```bash
+   npm install
+4. **Inicie o servidor de desenvolvimento:**
+   ```bash
+   npm run dev
+5. **Para sair, abra o terminal e aperte:**
+   ```
+   Ctrl + C
+
 ## Funcionalidades:
 
 - Adicionar tarefas.
