@@ -23,8 +23,11 @@ Projeto prático final Dinâmico de Front-End utilizando JSX (extensão síntese
 
 ## Interface
 
-<img width="1384" height="716" alt="Gravando 2026-06-12 132452" src="https://github.com/user-attachments/assets/941151a9-7ac2-4485-bca2-8fbe47920609" />
+<img width="1384" height="700" alt="Gravando 2026-06-12 132452" src="https://github.com/user-attachments/assets/941151a9-7ac2-4485-bca2-8fbe47920609" />
 
+## Modo escuro
+
+<img width="1385" height="510" alt="image" src="https://github.com/user-attachments/assets/1987df50-796b-4fa8-a1d8-0c765ec5f5b7" />
 
 
 ---
