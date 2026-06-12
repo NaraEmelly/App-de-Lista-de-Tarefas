@@ -36,7 +36,7 @@ Siga os passos abaixo para executar o projeto no seu computador.
    Ctrl + C
 
 ## Ferramentas Utilizadas:
-- Tecnologias utilizadas
+
 - React (hooks: useState)
 - Vite – build tool
 - Styled Components – CSS-in-JS com ThemeProvider
